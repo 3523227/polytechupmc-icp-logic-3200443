@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ExpLog.hh"
 #include "Atom.hh"
 // #include "ExpNot.hh"
 // #include "ExpAnd.hh"
@@ -6,12 +7,18 @@
 
 using namespace std;
 
+
+// heritage: class Titi: [accessibilité] Toto
+// classe abstraite: virtual type_retour methode( arg....) = 0 (=0 pour completement abstraite);
+
 int main()
 {
-  
+
+  //Ter t = F;
+  //  std::cout << t << std::endl;
   /* Classe Atome */
-  
-  {
+
+
     Atom a(T);
     Atom b;
     Atom c(b);
@@ -25,7 +32,6 @@ int main()
     cout << b.toString() << endl;
     cout << c.toString() << endl;
     cout << a.evaluate() << endl;
-  }
 
   /* Classe  ExpNot */
   // {
@@ -37,7 +43,7 @@ int main()
   //   cout << n2.evaluate() << endl;
   // }
 
-  /* Classe ExpOr et ExpAnd */  
+  /* Classe ExpOr et ExpAnd */
   // {
   //   Atom a(T);
   //   Atom b;
@@ -58,10 +64,10 @@ int main()
   //   ExpAnd and2(nota , c);
   //   ExpAnd and3(b , c);
   //   ExpOr or1(and1,and2);
-  //   ExpOr or2(or1,and3); 
-  
+  //   ExpOr or2(or1,and3);
+
   //   cout << or2.toString() << endl;
-  
+
   //   while(or2 == U)
   //     {
   // 	if(a == U)
@@ -83,4 +89,3 @@ int main()
   //   cout << or2.toString() << endl;
   // }
 }
-

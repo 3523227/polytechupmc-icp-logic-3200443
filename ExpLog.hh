@@ -1,11 +1,12 @@
 #pragma once
-#include<string>
+#include <string>
 
 
-class ExpLog{
-public:
-  virtual std::string toString() const  = 0;
-  virtual ThreeVal::ThreeVal_t evaluate()const = 0;
+enum Ter { U, F, T };
+std::ostream& operator<<(std::ostream&, Ter val);
+class ExpLog
+{
+   public:
+      virtual std::string toString() const  = 0;
+      virtual Ter evaluate()const = 0;
 };
-
-
