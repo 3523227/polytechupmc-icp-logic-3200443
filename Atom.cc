@@ -36,14 +36,14 @@ Atom::Atom(): _id(Atom::_num_atom++), _val(U){}
 
 Atom::Atom(Ter val) : _id(Atom::_num_atom++), _val(val){}
 
-Atom::Atom(Atom const& at):_id(Atom::_num_atom++){}
+Atom::Atom(Atom const& at):_id(Atom::_num_atom++), _val(U){}
 
 std::string Atom::toString()const
 {
 	std::ostringstream oss;
 	oss.str("");
 	oss << "(a_" << _id << " = ";
-	oss<< _val << ")";
+	oss << _val << ")";
 	return oss.str();
 }
 
